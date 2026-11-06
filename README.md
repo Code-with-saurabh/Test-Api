@@ -19,6 +19,8 @@ The easiest way is the download page:
 
 **→ [TestApi downloads](https://Code-with-saurabh.github.io/Test-Api/)**
 
+> **First-time download-page setup:** in GitHub open **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**, then run the **Deploy download page** workflow once. This is a one-time action; the page is served from [`docs/index.html`](docs/index.html). The release asset links below work immediately.
+
 | Platform | Installer | Direct download |
 |----------|-----------|-----------------|
 | Windows 10/11 (x64) | One-click `.exe` | [TestApi-1.0.0-win-x64.exe](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-win-x64.exe) |
