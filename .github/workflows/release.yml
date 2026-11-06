@@ -58,9 +58,25 @@ jobs:
       - name: Package installers
         run: ${{ matrix.command }}
         env:
-          # macOS builds are unsigned by default (free). Remove this line and add
-          # signing secrets if you own an Apple Developer certificate.
+          # Optional Windows code signing. Add these repository secrets to sign
+          # the installer and remove the "unknown publisher" SmartScreen prompt:
+          #   WIN_CSC_LINK          base64 .pfx, file path, or HTTPS URL
+          #   WIN_CSC_KEY_PASSWORD  certificate password
+          # See docs/CODE_SIGNING.md. Empty secrets are ignored.
+          WIN_CSC_LINK: ${{ secrets.WIN_CSC_LINK }}
+          WIN_CSC_KEY_PASSWORD: ${{ secrets.WIN_CSC_KEY_PASSWORD }}
+          # macOS builds are unsigned by default (free). Add CSC_LINK,
+          # CSC_KEY_PASSWORD and Apple notarization secrets to sign them.
           CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+
+      - name: Show Windows signature status
+        if: matrix.os == 'windows'
+        shell: pwsh
+        run: |
+          Get-ChildItem release/*.exe | ForEach-Object {
+            $sig = Get-AuthenticodeSignature -LiteralPath $_.FullName
+            Write-Host "$($_.Name): $($sig.Status)"
+          }
 
       - name: Upload installers
         uses: actions/upload-artifact@v4

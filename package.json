@@ -1,6 +1,6 @@
 {
   "name": "testapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TestApi — free, offline-first desktop API development and testing client for Windows, macOS and Linux",
   "main": "out/main/index.js",
   "author": "Saurabh Sharma <saurabhsharma12166@gmail.com>",
@@ -105,9 +105,10 @@
       ]
     },
     "nsis": {
-      "oneClick": true,
+      "oneClick": false,
       "perMachine": false,
       "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
       "runAfterFinish": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,

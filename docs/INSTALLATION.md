@@ -66,10 +66,10 @@ Inside the app, open **Settings → Download installers** for direct links to ev
 ## 3. Install on Windows
 
 1. Download `TestApi-<version>-win-x64.exe`.
-2. Double-click it. The installer is one-click and installs per-user by default.
+2. Double-click it. The setup wizard lets you choose the installation folder and installs per-user by default (no admin rights needed).
 3. TestApi launches automatically and creates Desktop + Start Menu shortcuts.
 
-**SmartScreen:** Windows may show *“Windows protected your PC”*. Click **More info → Run anyway**. This is normal for free, unsigned apps. Removing the warning permanently requires a paid code-signing certificate.
+**SmartScreen:** Windows may show *“Windows protected your PC”* for unsigned downloads. Click **More info → Run anyway** only if you trust the release and verified its checksum. Removing the warning permanently requires code signing; maintainers can follow [CODE_SIGNING.md](CODE_SIGNING.md). Never disable Windows Defender or add broad exclusion paths.
 
 **Firewall:** Windows Firewall may ask for network access. Allow it if you want to send API requests to remote servers.
 
