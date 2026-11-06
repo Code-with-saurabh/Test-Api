@@ -55,8 +55,8 @@ This guide covers installing TestApi on every supported OS, building installers 
 | macOS Apple Silicon | `TestApi-<version>-mac-arm64.dmg` |
 | macOS Intel | `TestApi-<version>-mac-x64.dmg` |
 | macOS portable | `TestApi-<version>-mac-<arch>.zip` |
-| Linux AppImage | `TestApi-<version>-linux-x64.AppImage` |
-| Debian / Ubuntu | `TestApi-<version>-linux-x64.deb` |
+| Linux AppImage | `TestApi-<version>-linux-x86_64.AppImage` |
+| Debian / Ubuntu | `TestApi-<version>-linux-amd64.deb` |
 | Linux archive | `TestApi-<version>-linux-x64.tar.gz` |
 
 Inside the app, open **Settings → Download installers** for direct links to every platform based on the installed version.
@@ -97,8 +97,8 @@ Alternatively use the `.zip` build if you prefer a portable app.
 ### AppImage (recommended, works everywhere)
 
 ```bash
-chmod +x TestApi-<version>-linux-x64.AppImage
-./TestApi-<version>-linux-x64.AppImage
+chmod +x TestApi-<version>-linux-x86_64.AppImage
+./TestApi-<version>-linux-x86_64.AppImage
 ```
 
 Move it to `~/Applications/` or `/opt/` and create a desktop shortcut if you like.
@@ -106,7 +106,7 @@ Move it to `~/Applications/` or `/opt/` and create a desktop shortcut if you lik
 ### Debian / Ubuntu (.deb)
 
 ```bash
-sudo apt install ./TestApi-<version>-linux-x64.deb
+sudo apt install ./TestApi-<version>-linux-amd64.deb
 ```
 
 Then launch **TestApi** from your applications menu, or run `testapi` in a terminal.

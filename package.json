@@ -1,6 +1,6 @@
 {
   "name": "testapi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TestApi — free, offline-first desktop API development and testing client for Windows, macOS and Linux",
   "main": "out/main/index.js",
   "author": "Saurabh Sharma <saurabhsharma12166@gmail.com>",

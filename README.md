@@ -23,12 +23,12 @@ The easiest way is the download page:
 
 | Platform | Installer | Direct download |
 |----------|-----------|-----------------|
-| Windows 10/11 (x64) | One-click `.exe` | [TestApi-1.0.0-win-x64.exe](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-win-x64.exe) |
-| macOS Apple Silicon | `.dmg` | [TestApi-1.0.0-mac-arm64.dmg](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-mac-arm64.dmg) |
-| macOS Intel | `.dmg` | [TestApi-1.0.0-mac-x64.dmg](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-mac-x64.dmg) |
-| Linux (portable) | `.AppImage` | [TestApi-1.0.0-linux-x64.AppImage](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-linux-x64.AppImage) |
-| Debian / Ubuntu | `.deb` | [TestApi-1.0.0-linux-x64.deb](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-linux-x64.deb) |
-| Linux archive | `.tar.gz` | [TestApi-1.0.0-linux-x64.tar.gz](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.0/TestApi-1.0.0-linux-x64.tar.gz) |
+| Windows 10/11 (x64) | One-click `.exe` | [TestApi-1.0.1-win-x64.exe](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-win-x64.exe) |
+| macOS Apple Silicon | `.dmg` | [TestApi-1.0.1-mac-arm64.dmg](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-mac-arm64.dmg) |
+| macOS Intel | `.dmg` | [TestApi-1.0.1-mac-x64.dmg](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-mac-x64.dmg) |
+| Linux (portable) | `.AppImage` | [TestApi-1.0.1-linux-x86_64.AppImage](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-linux-x86_64.AppImage) |
+| Debian / Ubuntu | `.deb` | [TestApi-1.0.1-linux-amd64.deb](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-linux-amd64.deb) |
+| Linux archive | `.tar.gz` | [TestApi-1.0.1-linux-x64.tar.gz](https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.0.1/TestApi-1.0.1-linux-x64.tar.gz) |
 
 > Older/newer releases are always listed at [github.com/Code-with-saurabh/Test-Api/releases](https://github.com/Code-with-saurabh/Test-Api/releases).
 > The in-app **Settings → Download installers** section also contains direct links for every OS.
@@ -144,7 +144,7 @@ Output directory: `release/`. Build output is git-ignored — installers belong 
    - `TestApi-1.0.1-win-x64.exe`
    - `TestApi-1.0.1-mac-arm64.dmg` / `TestApi-1.0.1-mac-x64.dmg`
    - `TestApi-1.0.1-mac-*.zip`
-   - `TestApi-1.0.1-linux-x64.AppImage` / `.deb` / `.tar.gz`
+   - `TestApi-1.0.1-linux-x86_64.AppImage` / `linux-amd64.deb` / `linux-x64.tar.gz`
    - `latest.yml`, `latest-mac.yml`, `latest-linux.yml`
 
 5. Every installed TestApi app checks GitHub Releases and updates itself automatically — **no server cost, no extra service**.

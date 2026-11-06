@@ -39,5 +39,9 @@ export function releaseAssetUrl(
   arch: 'x64' | 'arm64',
   ext: string
 ): string {
-  return `${GITHUB_URL}/releases/download/v${version}/TestApi-${version}-${os}-${arch}.${ext}`
+  // electron-builder uses target-specific arch labels on Linux:
+  // AppImage -> x86_64, deb -> amd64, tar.gz -> x64.
+  const fileArch =
+    os === 'linux' ? (ext === 'AppImage' ? 'x86_64' : ext === 'deb' ? 'amd64' : 'x64') : arch
+  return `${GITHUB_URL}/releases/download/v${version}/TestApi-${version}-${os}-${fileArch}.${ext}`
 }

@@ -31,7 +31,13 @@ describe('branding + release links', () => {
       'https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.2.3/TestApi-1.2.3-mac-arm64.dmg'
     )
     expect(releaseAssetUrl('1.2.3', 'linux', 'x64', 'AppImage')).toBe(
-      'https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.2.3/TestApi-1.2.3-linux-x64.AppImage'
+      'https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.2.3/TestApi-1.2.3-linux-x86_64.AppImage'
+    )
+    expect(releaseAssetUrl('1.2.3', 'linux', 'x64', 'deb')).toBe(
+      'https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.2.3/TestApi-1.2.3-linux-amd64.deb'
+    )
+    expect(releaseAssetUrl('1.2.3', 'linux', 'x64', 'tar.gz')).toBe(
+      'https://github.com/Code-with-saurabh/Test-Api/releases/download/v1.2.3/TestApi-1.2.3-linux-x64.tar.gz'
     )
   })
 })
