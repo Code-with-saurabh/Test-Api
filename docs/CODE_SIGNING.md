@@ -53,6 +53,9 @@ reputation faster.
 - **Azure Trusted Signing** if you meet Microsoft's eligibility requirements;
   sign the generated `.exe` after `electron-builder` finishes.
 - **SignPath Foundation** offers free signing for eligible open-source projects.
+  The release workflow is already wired for it — see
+  [SIGNPATH_SETUP.md](SIGNPATH_SETUP.md). Application/approval is required;
+  there is no zero-signup trusted certificate.
 
 ## Microsoft Defender false positives
 

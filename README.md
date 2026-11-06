@@ -35,7 +35,7 @@ The easiest way is the download page:
 
 ### First-run notes (unsigned builds)
 
-- **Windows:** SmartScreen may show *“Windows protected your PC”* → click **More info → Run anyway**. The app is free and currently not code-signed. Maintainers can enable signed builds by following [docs/CODE_SIGNING.md](docs/CODE_SIGNING.md) — once signed, the installer behaves like normal software.
+- **Windows:** SmartScreen may show *“Windows protected your PC”* → click **More info → Run anyway**. The app is free and currently not code-signed. Maintainers can enable signed builds via [docs/SIGNPATH_SETUP.md](docs/SIGNPATH_SETUP.md) (free for open source, requires application) or [docs/CODE_SIGNING.md](docs/CODE_SIGNING.md) — once signed, the installer behaves like normal software.
 - **macOS:** If macOS blocks the app, right-click the app → **Open** the first time. Unsigned `.dmg` builds cannot be notarised without a paid Apple Developer certificate.
 - **Linux:** `chmod +x TestApi-*.AppImage` then run it. For `.deb`: `sudo apt install ./TestApi-*.deb`.
 
