@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Download TestApi - a free, offline-first desktop API client for Windows, macOS and Linux." />
+    <title>Download TestApi</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #101218;
+        --panel: #171a22;
+        --panel-2: #1e222c;
+        --border: #2b3140;
+        --text: #e8ebf2;
+        --muted: #9aa3b5;
+        --accent: #6c8cff;
+        --accent-2: #8aa2ff;
+        --success: #36b37e;
+        --warning: #e6ad50;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: radial-gradient(1200px 600px at 50% -10%, #1d2440 0%, var(--bg) 55%);
+        color: var(--text);
+        font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.5;
+      }
+      a { color: var(--accent-2); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+      header { padding: 56px 0 24px; text-align: center; }
+      .logo {
+        width: 64px; height: 64px; border-radius: 18px; margin: 0 auto 18px;
+        display: grid; place-items: center; font-size: 28px; font-weight: 800;
+        background: linear-gradient(135deg, var(--accent), #9b7bff); color: #0e1118;
+        box-shadow: 0 12px 40px rgba(108, 140, 255, 0.35);
+      }
+      h1 { font-size: clamp(30px, 5vw, 48px); margin: 0 0 10px; letter-spacing: -0.02em; }
+      .tagline { color: var(--muted); font-size: 17px; margin: 0 auto; max-width: 640px; }
+      .meta { margin-top: 14px; color: var(--muted); font-size: 13px; }
+      .pill {
+        display: inline-flex; gap: 8px; align-items: center; padding: 6px 12px;
+        border: 1px solid var(--border); border-radius: 999px; background: rgba(255,255,255,.03);
+        font-size: 12px; color: var(--muted);
+      }
+      main { padding-bottom: 64px; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 28px; }
+      .card {
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        border: 1px solid var(--border); border-radius: 16px; padding: 20px;
+      }
+      .card h2 { margin: 0 0 4px; font-size: 17px; }
+      .card p { margin: 0 0 16px; color: var(--muted); font-size: 13px; }
+      .os-icon { font-family: ui-monospace, monospace; font-size: 13px; letter-spacing: .12em; color: var(--accent-2); margin-bottom: 8px; }
+      .downloads { display: flex; flex-direction: column; gap: 8px; }
+      .btn {
+        display: flex; align-items: center; justify-content: space-between; gap: 10px;
+        padding: 11px 14px; border-radius: 10px; border: 1px solid var(--border);
+        background: rgba(255,255,255,.035); color: var(--text); font-size: 13px;
+      }
+      .btn:hover { background: rgba(108,140,255,.14); border-color: rgba(108,140,255,.5); text-decoration: none; }
+      .btn.primary { background: var(--accent); border-color: var(--accent); color: #0d1017; font-weight: 700; }
+      .btn.primary:hover { background: var(--accent-2); }
+      .btn small { color: var(--muted); font-weight: 400; }
+      .btn.primary small { color: rgba(13,16,23,.7); }
+      .note {
+        margin-top: 28px; padding: 18px 20px; border-radius: 14px;
+        border: 1px solid var(--border); background: rgba(255,255,255,.025);
+        color: var(--muted); font-size: 13px;
+      }
+      .note strong { color: var(--text); }
+      .status { margin-top: 12px; font-size: 13px; color: var(--muted); }
+      .status.error { color: var(--warning); }
+      .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; justify-content: center; }
+      .links a { border: 1px solid var(--border); border-radius: 10px; padding: 9px 14px; font-size: 13px; color: var(--text); background: rgba(255,255,255,.03); }
+      .links a:hover { border-color: var(--accent); text-decoration: none; }
+      footer { border-top: 1px solid var(--border); padding: 24px 0 40px; color: var(--muted); font-size: 12px; text-align: center; }
+      code { background: rgba(255,255,255,.06); padding: 2px 6px; border-radius: 5px; font-size: 12px; }
+      .hidden { display: none !important; }
+    </style>
+  </head>
+  <body>
+    <header class="wrap">
+      <div class="logo">TA</div>
+      <h1>Download TestApi</h1>
+      <p class="tagline">Free, offline-first desktop API development and testing client. Collections, environments, scripts, runner, WebSocket and more - no accounts, no telemetry.</p>
+      <div class="meta">
+        <span class="pill" id="version-pill">Latest release</span>
+        <span class="pill">Windows - macOS - Linux</span>
+        <span class="pill">MIT License</span>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <div class="status" id="status">Checking the latest GitHub release...</div>
+
+      <div class="grid" id="download-grid">
+        <section class="card">
+          <div class="os-icon">âŠž</div>
+          <h2>Windows</h2>
+          <p>Windows 10/11, 64-bit. Single one-click installer - no admin rights required.</p>
+          <div class="downloads">
+            <a class="btn primary" data-asset="win" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Windows installer <small>.exe</small></span><span>Download</span>
+            </a>
+            <a class="btn" data-asset="win-blockmap" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Update metadata <small>.blockmap</small></span><span>Download</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="os-icon">âŒ˜</div>
+          <h2>macOS</h2>
+          <p>macOS 11+ - choose Apple Silicon (M1/M2/M3/M4) or Intel.</p>
+          <div class="downloads">
+            <a class="btn primary" data-asset="mac-arm64" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Apple Silicon <small>.dmg</small></span><span>Download</span>
+            </a>
+            <a class="btn" data-asset="mac-x64" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Intel Mac <small>.dmg</small></span><span>Download</span>
+            </a>
+            <a class="btn" data-asset="mac-zip" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Portable ZIP <small>.zip</small></span><span>Download</span>
+            </a>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="os-icon">ðŸ§</div>
+          <h2>Linux</h2>
+          <p>64-bit. AppImage runs anywhere; DEB for Debian/Ubuntu; tarball for advanced users.</p>
+          <div class="downloads">
+            <a class="btn primary" data-asset="linux-appimage" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>AppImage <small>portable</small></span><span>Download</span>
+            </a>
+            <a class="btn" data-asset="linux-deb" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Debian / Ubuntu <small>.deb</small></span><span>Download</span>
+            </a>
+            <a class="btn" data-asset="linux-tar" href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">
+              <span>Archive <small>.tar.gz</small></span><span>Download</span>
+            </a>
+          </div>
+        </section>
+      </div>
+
+      <div class="note">
+        <strong>Automatic updates are free.</strong> TestApi checks GitHub Releases at startup and every 6 hours. When a new version is published,
+        the installed app downloads it in the background and installs it on restart. There is no paid update server and no account required.
+        <br /><br />
+        <strong>Unsigned builds:</strong> Windows SmartScreen may say "More info -> Run anyway". macOS may require right-click -> Open the first time.
+        These warnings disappear only with paid code-signing certificates.
+      </div>
+
+      <div class="links">
+        <a href="https://github.com/Code-with-saurabh/Test-Api/releases/latest">All downloads (latest release)</a>
+        <a href="https://github.com/Code-with-saurabh/Test-Api/releases">Release history</a>
+        <a href="https://github.com/Code-with-saurabh/Test-Api">Source code</a>
+        <a href="https://github.com/Code-with-saurabh/Test-Api/issues">Report an issue</a>
+      </div>
+    </main>
+
+    <footer class="wrap">
+      TestApi - MIT License - Built by Saurabh Sharma -
+      <a href="https://saurabhsharma.is-a.dev/">saurabhsharma.is-a.dev</a>
+    </footer>
+
+    <script>
+      const OWNER = 'Code-with-saurabh'
+      const REPO = 'Test-Api'
+      const API = `https://api.github.com/repos/${OWNER}/${REPO}/releases/latest`
+      const statusEl = document.getElementById('status')
+      const pill = document.getElementById('version-pill')
+
+      function humanSize(bytes) {
+        if (!Number.isFinite(bytes) || bytes <= 0) return ''
+        const units = ['B', 'KB', 'MB', 'GB']
+        let value = bytes
+        let unit = 0
+        while (value >= 1024 && unit < units.length - 1) { value /= 1024; unit += 1 }
+        return `${value.toFixed(value >= 10 || unit === 0 ? 0 : 1)} ${units[unit]}`
+      }
+
+      function findAsset(assets, patterns) {
+        for (const pattern of patterns) {
+          const found = assets.find((asset) => pattern.test(asset.name))
+          if (found) return found
+        }
+        return null
+      }
+
+      function setButton(selector, asset) {
+        const el = document.querySelector(selector)
+        if (!el) return
+        if (!asset) {
+          el.classList.add('hidden')
+          return
+        }
+        el.href = asset.browser_download_url
+        const small = el.querySelector('small')
+        if (small) small.textContent = `${small.textContent.split(' - ')[0]} - ${humanSize(asset.size)}`
+        el.title = `${asset.name} (${humanSize(asset.size)})`
+      }
+
+      async function loadLatest() {
+        try {
+          const response = await fetch(API, { headers: { Accept: 'application/vnd.github+json' } })
+          if (!response.ok) throw new Error(`GitHub API returned ${response.status}`)
+          const release = await response.json()
+          const assets = release.assets || []
+          pill.textContent = `Latest: ${release.tag_name || release.name || 'release'}`
+
+          setButton('[data-asset="win"]', findAsset(assets, [/win-x64\.exe$/i, /win.*\.exe$/i, /\.exe$/i]))
+          setButton('[data-asset="win-blockmap"]', findAsset(assets, [/win.*\.exe\.blockmap$/i, /\.blockmap$/i]))
+          setButton('[data-asset="mac-arm64"]', findAsset(assets, [/mac-arm64\.dmg$/i, /arm64.*\.dmg$/i]))
+          setButton('[data-asset="mac-x64"]', findAsset(assets, [/mac-x64\.dmg$/i, /mac.*x64.*\.dmg$/i]))
+          setButton('[data-asset="mac-zip"]', findAsset(assets, [/mac.*\.zip$/i, /\.zip$/i]))
+          setButton('[data-asset="linux-appimage"]', findAsset(assets, [/linux.*\.AppImage$/i, /\.AppImage$/i]))
+          setButton('[data-asset="linux-deb"]', findAsset(assets, [/linux.*\.deb$/i, /\.deb$/i]))
+          setButton('[data-asset="linux-tar"]', findAsset(assets, [/linux.*\.tar\.gz$/i, /\.tar\.gz$/i]))
+
+          statusEl.textContent = `Latest release ${release.tag_name || ''} published ${release.published_at ? new Date(release.published_at).toLocaleDateString() : 'recently'}.`
+          statusEl.classList.remove('error')
+        } catch (error) {
+          statusEl.textContent = 'Could not load release metadata (GitHub API rate limit or no release yet). The buttons below still open the latest release page.'
+          statusEl.classList.add('error')
+          console.error(error)
+        }
+      }
+
+      loadLatest()
+    </script>
+  </body>
+</html>
+
